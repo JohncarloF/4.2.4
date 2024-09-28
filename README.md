@@ -1,4 +1,5 @@
-# 4.2.4 String indexing, escaping, and template literals
+# 4.2.4 
+## String indexing, escaping, and template literals
 
 ### Template literal 
 A JavaScript feature that makes string concatenation, embedded expressions, and formatting easier
@@ -61,7 +62,7 @@ function sentenceCase(sentence) {
   return first.toUpperCase() + rest.toLowerCase();
 }
 '''
-# Steps Explained
+### Steps Explained
 
 1. It sets the first variable to be equal to only the first character. In other words, substring(0, 1) means that the substring will begin on index 0 and include only 1 character.
 
@@ -90,4 +91,44 @@ function titleize(title) {
 }
 titleize("the light FANTASIC"); //> "The Light Fantastic";
 '''
-# Steps Explained
+### Steps Explained
+1. We use the split() method to split the title string into an array of words.
+2. We create an empty array called 'result' to store the capitalized words.
+3. We use a for loop to iterate through each word in the array.
+4. We use the sentenceCase() function to capitalize the first letter of each word and store it in a variable called 'capitalized'.
+5. We use the push() method to add the capitalized word to the result array.
+6. We use the join() method to join the words in the result array into a string with spaces between each word.
+7. We return the result string.
+
+## Template Literals 
+
+'''javascript
+const title = "Alice in Wonderland";
+  const price = 9.50;
+  console.log(title + " is on sale for $" + price + ".");
+}
+
+//> "Alice in Wonderland is on sale for $9.50."
+'''
+### Using template literals
+'''javascript
+const title = "Alice in Wonderland";
+const price = 9.50;
+console.log('${title} is on sale for $${price}.');
+'''
+### Steps Explained
+1. We use backticks (```) to create a template literal.
+2. We use ${} to insert the values of the variables title and price into the string.
+3. We can also use template literals to create multi-line strings.
+
+## Escaping strings
+
+'''javascript
+const title = "Alice's Adventures in Wonderland";
+console.log(title);
+//> "Alice's Adventures in Wonderland"
+'''
+### Steps Explained
+1. We use the backslash (\) character to escape the single quote (') in the string.
+2. This tells JavaScript that the single quote is part of the string, not the end of the string.
+3. We can also escape other characters such as double quotes ("), backslashes (\), and newlines (\n).
