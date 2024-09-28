@@ -132,3 +132,29 @@ console.log(title);
 1. We use the backslash (\) character to escape the single quote (') in the string.
 2. This tells JavaScript that the single quote is part of the string, not the end of the string.
 3. We can also escape other characters such as double quotes ("), backslashes (\), and newlines (\n).
+
+## Assessment 
+
+### Explanation:
+Function Definition:
+
+The function listAllItems takes a single parameter products, which is expected to be an array of product objects.
+Check for Empty or Undefined Array:
+
+The first if statement checks if the products array is either not provided (!products) or is empty (products.length === 0).
+If either condition is true, the function returns the string "There are no items for sale."
+Get the Number of Items:
+
+The variable itemCount is assigned the length of the products array, which represents the number of items.
+Create an Array of Item Names:
+
+The itemNames array is created by mapping over the products array and extracting the name property from each product object.
+Handle Different Cases Based on the Number of Items:
+
+One Item: If itemCount is 1, the function returns a string indicating there is 1 item for sale, followed by the item's name.
+Two Items: If itemCount is 2, the function returns a string indicating there are 2 items for sale, followed by both item names separated by "and".
+More Than Two Items: If itemCount is greater than 2, the function returns a string indicating the total number of items for sale, followed by all item names separated by commas.
+Export the Function:
+
+The function is exported using module.exports so that it can be used in other files or for testing purposes.
+This code ensures that the output message is correctly formatted based on the number of items in the products array.
