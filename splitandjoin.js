@@ -7,7 +7,5 @@ console.log(title.split("Guards")); //> erased "Guards"
 
 const titleArr = ["The", "Light", "Fantastic"];
 console.log(titleArr.join("-")); //> added the "-"
-console.log(titleArr.join("_-_")); //> nothing happens 
-console.log(titleArr.join()); //> nothing has occured 
-//> I am actually having trouble getting vaules for the last two 
-
+console.log(titleArr.join("_-_")); //> added the "_-_"
+console.log(titleArr.join()); //> added the ","
